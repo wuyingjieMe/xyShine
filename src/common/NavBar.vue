@@ -98,12 +98,11 @@
 
 
   .purposeUi {
-    width: 307px;
     height: 33px;
     border: 1px dashed #FFBF24;
     border-radius: 20px;
     margin-top: 60px;
-
+    padding-right:24px;
   }
 
   .purposeUi li {

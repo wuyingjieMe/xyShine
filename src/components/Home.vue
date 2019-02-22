@@ -19,29 +19,33 @@
       <el-row style="width:100%;height: 394px;background-color: #f5f5f5;">
         <div class="navbar radioImg">
           <el-col :span="6">
-            <div class="grid-content bg-purple">
-              <img src="../assets/logo.png" alt="">
+            <div class="grid-content bg-purple" @mouseenter="changRadioImg(1)">
+              <img v-if="img1" src="../assets/01、.png" alt="">
+              <img v-else src="../assets/1.png" alt="">
               <p>专业测评</p>
               <p>名校教授，考官制定课程大纲，参与教学工作</p>
             </div>
           </el-col>
           <el-col :span="6">
-            <div class="grid-content bg-purple-light">
-              <img src="../assets/logo.png" alt="">
+            <div class="grid-content bg-purple-light" @mouseenter="changRadioImg(2)">
+              <img v-if="img2" src="../assets/02、.png" alt="">
+              <img v-else src="../assets/2.png" alt="">
               <p>优秀师资</p>
               <p>名校教授，考官制定课程大纲，参与教学工作</p>
             </div>
           </el-col>
           <el-col :span="6">
-            <div class="grid-content bg-purple">
-              <img src="../assets/logo.png" alt="">
+            <div class="grid-content bg-purple" @mouseenter="changRadioImg(3)">
+              <img v-if="img3" src="../assets/03.png" alt="">
+              <img v-else src="../assets/3.png" alt="">
               <p>定制课程</p>
               <p>名校教授，考官制定课程大纲，参与教学工作</p>
             </div>
           </el-col>
           <el-col :span="6">
-            <div class="grid-content bg-purple-light">
-              <img src="../assets/logo.png" alt="">
+            <div class="grid-content bg-purple-light" @mouseenter="changRadioImg(4)">
+              <img v-if="img4" src="../assets/04.png" alt="">
+              <img v-else src="../assets/4.png" alt="">
               <p>师资培训</p>
               <p>名校教授，考官制定课程大纲，参与教学工作</p>
             </div>
@@ -115,7 +119,7 @@
     </div>
     <div class="formSubmit navbar clearfix">
       <div style="width: 49%;float: left;">
-        <el-form :model="ruleForm" :rules="rules" ref="ruleForm" label-width="100px" class="demo-ruleForm">
+        <el-form :model="ruleForm"  ref="ruleForm" label-width="100px" class="demo-ruleForm">
           <el-form-item label="活动名称" prop="name">
             <el-input v-model="ruleForm.name"></el-input>
           </el-form-item> <el-form-item label="活动名称" prop="name">
@@ -124,7 +128,7 @@
         </el-form>
       </div>
       <div style="width: 50%;float: right;">
-        <el-form style="float: right;" :model="ruleForm" :rules="rules" ref="ruleForm" label-width="100px" class="demo-ruleForm">
+        <el-form style="float: right;" :model="ruleForm"  ref="ruleForm" label-width="100px" class="demo-ruleForm">
 
           <el-form-item label="活动区域" prop="region">
             <el-select v-model="ruleForm.region" placeholder="请选择活动区域">
@@ -162,11 +166,45 @@
         ruleForm: {
           name: '',
           region: '',
-        }
+        },
+        img1:true,
+        img2:true,
+        img3:true,
+        img4:true,
       }
     },
     methods: {
+      changRadioImg(num){
+        var that = this;
+         switch (num){
+           case 1:
+             that.img1 = false;
+             that.img2 = true;
+             that.img3 = true;
+             that.img4 = true;
+             break;
+           case 2:
+             that.img1 = true;
+             that.img2 = false;
+             that.img3 = true;
+             that.img4 = true;
+             break;
+             case 3:
+             that.img1 = true;
+             that.img2 = true;
+             that.img3 = false;
+             that.img4 = true;
+             break;
+             case 4:
+             that.img1 = true;
+             that.img2 = true;
+             that.img3 = true;
+             that.img4 = false;
+             break;
+         }
+      },
       btn_left() {
+        // 点击向左轮播
         if (this.marginRange > -1480) {
           console.log(this.marginRange);
           this.marginRange -= '240'
@@ -175,6 +213,7 @@
 
       },
       btn_right() {
+        // 点击向右轮播
         if (this.marginRange <0) {
           console.log(this.marginRange);
           this.marginRange += 240
@@ -199,8 +238,12 @@
 </script>
 
 <style scoped>
-  .radioImg p{
+  .grid-content{
     text-align: center;
+    padding-top: 50px;
+  }
+  .radioImg p:nth-child(2){
+    padding-top: 30px;
   }
   .carousel_custom{
     position: relative;

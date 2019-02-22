@@ -17,27 +17,31 @@
     </div>
     <div>
       <el-row style="width:100%;height: 394px;background-color: #f5f5f5;">
-        <div class="navbar">
+        <div class="navbar radioImg">
           <el-col :span="6">
-            <div class="grid-content bg-purple"><img src="../assets/logo.png" alt="">
+            <div class="grid-content bg-purple">
+              <img src="../assets/logo.png" alt="">
               <p>专业测评</p>
               <p>名校教授，考官制定课程大纲，参与教学工作</p>
             </div>
           </el-col>
           <el-col :span="6">
-            <div class="grid-content bg-purple-light"><img src="../assets/logo.png" alt="">
+            <div class="grid-content bg-purple-light">
+              <img src="../assets/logo.png" alt="">
               <p>优秀师资</p>
               <p>名校教授，考官制定课程大纲，参与教学工作</p>
             </div>
           </el-col>
           <el-col :span="6">
-            <div class="grid-content bg-purple"><img src="../assets/logo.png" alt="">
+            <div class="grid-content bg-purple">
+              <img src="../assets/logo.png" alt="">
               <p>定制课程</p>
               <p>名校教授，考官制定课程大纲，参与教学工作</p>
             </div>
           </el-col>
           <el-col :span="6">
-            <div class="grid-content bg-purple-light"><img src="../assets/logo.png" alt="">
+            <div class="grid-content bg-purple-light">
+              <img src="../assets/logo.png" alt="">
               <p>师资培训</p>
               <p>名校教授，考官制定课程大纲，参与教学工作</p>
             </div>
@@ -224,6 +228,9 @@
 </script>
 
 <style scoped>
+  .radioImg p{
+    text-align: center;
+  }
   .carousel_custom{
     position: relative;
   }

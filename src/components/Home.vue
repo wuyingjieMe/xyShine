@@ -140,35 +140,6 @@
     <el-row style="text-align: center">
       <el-button type="danger">马上预约</el-button>
     </el-row>
-    <!--教师展示-->
-    <!---->
-
-    <!--<select name="city" lay-verify="">-->
-    <!--<option value="">请选择预约校区</option>-->
-    <!--<option value="010">国贸校区</option>-->
-    <!--<option value="021">欢乐谷校区</optio<div class="layui-col-xs4 layui-col-sm7 layui-col-md8 font_teacher"-->
-    <!--style="width: 340px;margin: 40px auto;border-bottom: 2px solid #646464;">-->
-    <!--预约试听 / <span>BOOKING&nbsp;AUDITION</span>-->
-    <!--</div>-->
-
-    <!--<el-form :inline="true"  class="demo-form-inline">-->
-    <!--<el-form-item label="审批人">-->
-    <!--<el-input v-model="formInline.user" placeholder="审批人"></el-input>-->
-    <!--</el-form-item>-->
-    <!--<el-form-item label="活动区域">-->
-    <!--<el-select  placeholder="活动区域">-->
-    <!--<el-option label="区域一" value="shanghai"></el-option>-->
-    <!--<el-option label="区域二" value="beijing"></el-option>-->
-    <!--</el-select>-->
-    <!--</el-form-item>-->
-    <!--<el-form-item>-->
-    <!--<el-button type="primary" @click="onSubmit">查询</el-button>-->
-    <!--</el-form-item>-->
-    <!--</el-form>-->
-    <option value="0571">望京校区</option>
-    <option value="0571">公主坟校区</option>
-    <option value="0571">望京校区</option>
-
   </div>
 </template>
 

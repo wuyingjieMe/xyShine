@@ -1,5 +1,5 @@
 <template>
-  <div class='navbar footers'>
+  <div class='NavBar'>
   <div class='footer clearfix'>
       <div class="navbar footer-top-product clearfix">
         <dl>
@@ -41,13 +41,13 @@
           <dd><a href="#">台词培训班</a></dd>
           <dd><a href="#">诗词朗诵培训班</a></dd>
         </dl>
-        <div class="coverage">
-          <h2></h2>
+        <!--<div class="coverage">-->
+          <!--<h2></h2>-->
 
-          <p></p>
+          <!--<p></p>-->
 
-          <p class="fr"><a href="#">查看详情 ></a></p>
-        </div>
+          <!--<p class="fr"><a href="#">查看详情 ></a></p>-->
+        <!--</div>-->
       </div>
     </div>
   <div class="footer-bottom-copyright">
@@ -65,11 +65,6 @@
 </script>
 
 <style scoped>
-  .footers {
-    background-color: #4D4D4D;
-    width: 100%;
-    /*height: 320px;*/
-  }
   .footer-top-product dl dd {
     height: 22px;
   }
@@ -89,11 +84,12 @@
     line-height: 22px;
   }
   /*footer部分开始*/
-  .footer-top-slogan {
-    height: 54px;
-    background-color: #F5F5F5;
-    padding: 20px 0;
+
+  .footer {
+    height: 320px;
+    background-color: #4D4D4D;
   }
+
   a {
     font-size: 18px;
     line-height: 28px;
@@ -101,18 +97,6 @@
   .footer-top-slogan span {
     position: absolute;
     left: 50%;
-  }
-  .slogan1 {
-    margin-left: -600px;
-  }
-  .slogan2 {
-    margin-left: -294px;
-  }
-  .slogan3 {
-    margin-left: 10px;
-  }
-  .slogan4 {
-    margin-left: 308px;
   }
   .footer-top-product dl {
     /*margin-top: 12px;*/
@@ -126,10 +110,11 @@
     margin: 40px 0;
     font-family: "microsoft yahei";
     height: 30px;
-    border:1px solid #fff;
+    border:1px dashed #fff;
     width: 90px;
     text-align: center;
     color: #fff;
+    border-radius: 30px;
   }
   .footer-top-product dl dd {
     height: 22px;
@@ -148,14 +133,7 @@
   .coverage p {
     line-height: 22px;
   }
-  .footer-bottom {
-    border-top: 1px solid #EAEAEA;
-    margin-top: 26px;
-    text-align: center;
-  }
-  .footer-bottom-links {
-    margin-top: 20px;
-  }
+
   .footer-bottom-links a {
     padding: 0 12px;
   }
@@ -169,9 +147,7 @@
     color: #fff;
     padding: 5px 0;
   }
-  .footer-bottom-message {
-    margin: 10px 0;
-  }
+  .
   .footer-bottom-message a {
     margin: 0 10px;
   }

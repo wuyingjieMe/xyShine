@@ -30,7 +30,9 @@ export default {
     font-weight: normal;
     font-size: 100%;
   }
-
+li {
+  list-style: none;
+}
   s, i, em {  /*一般是起装饰作用*/
     font-style: normal;  /*去掉原有的样式*/
     text-decoration: none;  /*去掉下划线或是删除线*/

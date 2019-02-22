@@ -358,7 +358,6 @@
     font-size: 18px;
   }
 
-
   .newWorkFont {
    width: 664px;
  }

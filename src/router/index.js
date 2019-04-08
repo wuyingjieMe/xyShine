@@ -8,13 +8,17 @@ import NavBar from '@/common/NavBar'
 
 import tabS from '@/common/tabS'
 
-import footer from '@/common/footer'
+import footers from '@/common/footers'
 //  common 里面是放公共的模块，
 import Home from '@/components/Home'
 
 import Course from '@/components/Course'
 
+import newMusic from  '@/components/newMusic'
 
+import students from '@/components/students'
+
+import teachers from '@/components/teachers'
 Vue.use(Router)
 
 export default new Router({
@@ -38,13 +42,25 @@ export default new Router({
       name:'nav',
       component:NavBar
     },{
-      path:'/footer',
+      path:'/footers',
       name:'footers',
-      component:footer
+      component:footers
     },{
     path:'/tabS',
     name:'tabSwitch',
     component:tabS
-    }
+    },{
+    path:'/newMusic',
+      name:'new',
+      component:newMusic
+    },{
+      path:'/students',
+      name:'students',
+      component:students
+    },{
+      path:'/teachers',
+      name:'teachers',
+      component:teachers
+    },
   ]
 })

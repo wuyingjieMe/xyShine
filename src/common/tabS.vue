@@ -62,7 +62,7 @@
   .message:after {
     /*content: '';*/
     position: relative;
-    background-image: url('../assets/留言.png') ;
+    /*background-image: url('../assets/message.png') ;*/
     top:0;
     left: 0;
   }

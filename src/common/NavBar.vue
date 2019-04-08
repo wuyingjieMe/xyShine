@@ -37,7 +37,7 @@
         active-text-color="#ffd04b">
         <el-menu-item index="1" @click="$router.push('/abc')">关于先艺</el-menu-item>
         <el-menu-item index="2" @click="$router.push('/abc')">师资力量</el-menu-item>
-        <el-menu-item index="3" @click="$router.push('/abc')">新音乐素养</el-menu-item>
+        <el-menu-item index="3" @click="$router.push('/newMusic')">新音乐素养</el-menu-item>
         <el-menu-item index="4" @click="$router.push('/courses')">课程介绍</el-menu-item>
         <el-menu-item index="5" @click="$router.push('/abc')">学员风采</el-menu-item>
         <el-menu-item index="6" @clickF="$router.push('/abc')">视频专栏</el-menu-item>

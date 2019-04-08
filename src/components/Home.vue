@@ -11,8 +11,7 @@
     <img style="width: 100%;" src="../assets/two_lunBo.jpg" alt="">
 
     <!--教学体系-->
-    <div class="layui-col-xs4 layui-col-sm7 layui-col-md8 font_teacher"
-         style="width: 340px;margin: 40px auto;border-bottom: 2px solid #646464">
+    <div class="layui-col-xs4 layui-col-sm7 layui-col-md8 font_teacher">
       教师展示 / <span>TEACHER&nbsp;DISPLAY</span>
     </div>
     <div>
@@ -54,8 +53,7 @@
       </el-row>
     </div>
     <!--教师展示-->
-    <div class="layui-col-xs4 layui-col-sm7 layui-col-md8 font_teacher"
-         style="width: 340px;margin: 40px auto;border-bottom: 2px solid #646464;">
+    <div class="layui-col-xs4 layui-col-sm7 layui-col-md8 font_teacher">
       教师展示 / <span>TEACHER&nbsp;DISPLAY</span>
     </div>
     <div class="navbar">
@@ -86,8 +84,7 @@
       </el-row>
     </div>
 
-    <div class="layui-col-xs4 layui-col-sm7 layui-col-md8 font_teacher"
-         style="width: 340px;margin: 40px auto;border-bottom: 2px solid #646464;">
+    <div class="layui-col-xs4 layui-col-sm7 layui-col-md8 font_teacher">
       明星教师 / <span>TEACHER&nbsp;DISPLAY</span>
     </div>
     <!--轮播图小的-->
@@ -101,8 +98,7 @@
           <li><img src="../assets/教师页——尼老师.png" alt=""></li>
           <li><img src="../assets/教师页——徐心卉.png" alt=""></li>
           <li><img src="../assets/教师页——梁馨予.png" alt=""></li>
-          <li><img src="../assets/教师页——王若兰.png" alt=""></li>
-          <li><img src="../assets/教师页——许斌.png" alt=""></li>
+          <!--<li><img src="../assets/教师页——王若兰.png" alt=""></li<li><img src="../assets/教师页——许斌.png" alt=""></li>-->
           <li><img src="../assets/教师页——赵晓云.png" alt=""></li>
           <li><img src="../assets/教师页——邢月.png" alt=""></li>
         </ul>
@@ -113,32 +109,39 @@
 
     <!--预约试听-->
 
-    <div class="layui-col-xs4 layui-col-sm7 layui-col-md8 font_teacher"
-         style="width: 340px;margin: 40px auto;border-bottom: 2px solid #646464;">
+    <div class="layui-col-xs4 layui-col-sm7 layui-col-md8 font_teacher">
       预约试听 / <span>TEACHER&nbsp;DISPLAY</span>
     </div>
     <div class="formSubmit navbar clearfix">
       <div style="width: 49%;float: left;">
         <el-form :model="ruleForm"  ref="ruleForm" label-width="100px" class="demo-ruleForm">
-          <el-form-item label="活动名称" prop="name">
-            <el-input v-model="ruleForm.name"></el-input>
-          </el-form-item> <el-form-item label="活动名称" prop="name">
-            <el-input v-model="ruleForm.name"></el-input>
+          <el-form-item label="" prop="name" placeholder='请输入您的姓名'>
+            <el-input v-model="ruleForm.name">您的姓名：</el-input>
+          </el-form-item> <el-form-item label="" prop="name">
+            <el-input v-model="ruleForm.name">请输入您的联系方式</el-input>
           </el-form-item>
         </el-form>
       </div>
       <div style="width: 50%;float: right;">
         <el-form style="float: right;" :model="ruleForm"  ref="ruleForm" label-width="100px" class="demo-ruleForm">
 
-          <el-form-item label="活动区域" prop="region">
-            <el-select v-model="ruleForm.region" placeholder="请选择活动区域">
-              <el-option label="区域一" value="shanghai"></el-option>
-              <el-option label="区域二" value="beijing"></el-option>
+          <el-form-item label="请选择预约校区" prop="region">
+            <el-select v-model="ruleForm.region" placeholder="请选择预约校区">
+              <el-option label="国贸校区" value="shanghai"></el-option>
+              <el-option label="欢乐谷校区" value="beijing"></el-option>
+              <el-option label="青年路校区" value="beijing"></el-option>
+              <el-option label="公主坟校区" value="beijing"></el-option>
+              <el-option label="望京校区" value="beijing"></el-option>
             </el-select>
-          </el-form-item><el-form-item label="活动区域" prop="region">
-            <el-select v-model="ruleForm.region" placeholder="请选择活动区域">
-              <el-option label="区域一" value="shanghai"></el-option>
-              <el-option label="区域二" value="beijing"></el-option>
+          </el-form-item><el-form-item label="请选择预约课程" prop="region">
+            <el-select v-model="ruleForm.region" placeholder="请选择预约课程">
+              <el-option label="声乐课程" value="shanghai"></el-option>
+              <el-option label="舞蹈课程" value="beijing"></el-option>
+              <el-option label="钢琴课程" value="beijing"></el-option>
+              <el-option label="乐器课程" value="beijing"></el-option>
+              <el-option label="表演课程" value="beijing"></el-option>
+              <el-option label="朗读者课程" value="beijing"></el-option>
+              <el-option label="新音乐素养课程" value="beijing"></el-option>
             </el-select>
           </el-form-item>
 
@@ -156,6 +159,7 @@
   //  @ 是指根路径 这里的根路径是 src 文件
   //  这里导入 的 NavBar 名字 要跟下面 components ：冒号后面那个要一样 （别问为什么）
   import NavBar from '@/common/NavBar'
+  import footers from '@/common/footers'
 
   export default {
     name: "Home",
@@ -232,15 +236,21 @@
     },
     components: {
       // 头部导航是公共 所以做成组件 ， components 是放组件的， 你可以理解为 放了一个 DIV 名字随便起
-      navBar: NavBar
+     NavBar:NavBar,
+      footers:footers
     }
   }
 </script>
 
 <style scoped>
+  .font_teacher {
+    width: 366px;
+    margin: 40px auto;
+    border-bottom: 2px solid #646464;
+  }
   .grid-content{
     text-align: center;
-    padding-top: 50px;
+    /*padding-top: 50px;*/
   }
   .radioImg p:nth-child(2){
     padding-top: 30px;

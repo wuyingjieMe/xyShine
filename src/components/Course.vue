@@ -268,6 +268,7 @@
   //  @ 是指根路径 这里的根路径是 src 文件
   //  这里导入 的 NavBar 名字 要跟下面 components ：冒号后面那个要一样 （别问为什么）
   import NavBar from '@/common/NavBar'
+  import footers from '@/common/footers'
 
   export default {
     name: "Course",
@@ -303,12 +304,13 @@
       layer.open({
         type: 1,
         content: '传入任意的文本或html' //这里content是一个普通的String
-      });xie
+      });
       console.log($);
     },
     components: {
-      // 头部导航是公共 所以做成组件 ， components 是放组件的， 你可以理解为 放了一个 DIV 名字随便起
-      navBar: NavBar
+                                 // 头部导航是公共 所以做成组件 ， components 是放组件的， 你可以理解为 放了一个 DIV 名字随便起
+      navBar: NavBar,
+      footers:footers
     }
   }
 </script>

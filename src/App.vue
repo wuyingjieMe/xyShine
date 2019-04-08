@@ -15,6 +15,25 @@ export default {
     padding: 0;
     margin: 0;
   }
+  .navbar{
+    width: 1140px;
+    margin: 0 auto;
+    color:#000;
+  }
+  .text-right{
+    text-align: right;
+  }
+  .text-left{
+    text-align:left;
+  }
+  .text-center{
+    text-align:center;
+  }
+  .font_teacher {
+    font-size: 40px;
+    color: #000;
+    position: relative;
+  }
 
   a {
     color: #fff;   /*a 标签是不继承颜色 的*/
@@ -45,25 +64,6 @@ li {
   /*text-align: center;*/
   color: #2c3e50;
 }
-  .navbar{
-    width: 1140px;
-    margin: 0 auto;
-    color:#000;
-  }
-  .text-right{
-    text-align: right;
-  }
-  .text-left{
-    text-align:left;
-  }
-  .text-center{
-    text-align:center;
-  }
-  .font_teacher {
-    font-size: 40px;
-    color: #000;
-    position: relative;
-  }
   .font_teacher>span {
     font-size: 18px;
     color:#646464;
@@ -85,8 +85,6 @@ li {
   .fr {
     float: right;
   }
-
-
   .clearfix:before, .clearfix:after {
     /*清除浮动，最好最标准的写法*/
     content: "";
@@ -101,4 +99,8 @@ li {
     *zoom: 1; /*IE/7/6*/  /*兼容IE6下的写法*/
   }
 
+  div>img{
+    display: block;
+  /*//设置为任意值都可以*/
+  }
 </style>
